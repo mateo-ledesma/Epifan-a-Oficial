@@ -285,7 +285,7 @@ form {
 }
 
 .card-compra:hover {
-  transform: scale(1.1);
+  transform: scale(0.5);
 }
 
 .card-compra .card-compra-tittle {

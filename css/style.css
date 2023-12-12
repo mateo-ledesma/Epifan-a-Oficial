@@ -24,6 +24,10 @@ h2 {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
+  background-color: rgba(236, 186, 212, 0.474);
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
 }
 
 /* Navegacion */
@@ -44,7 +48,6 @@ header {
   justify-content: space-around;
   z-index: 1000;
 }
-
 .nav .icono_titulo {
   display: flex;
   align-items: center;
@@ -52,21 +55,18 @@ header {
   padding: 0 20px;
   gap: 10px;
 }
-
 .nav .icono {
   display: flex;
   height: 45px;
   width: 45px;
   justify-content: center;
 }
-
 .nav .nav1titulo {
   display: flex;
   font-weight: bolder;
   font-size: 30px;
   color: rgb(86, 81, 81);
 }
-
 .nav .nav_lista {
   width: 60%;
   display: flex;
@@ -76,7 +76,6 @@ header {
   list-style: none;
   z-index: 10;
 }
-
 .nav .lista {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
@@ -99,6 +98,7 @@ header {
 }
 
 /* Presentacion */
+/* Pagina INICIO */
 .inicio-presentacion {
   width: 100%;
   height: 100%;
@@ -166,18 +166,20 @@ p {
 .box1 {
   width: 800px;
   font-size: 25px;
+  margin-bottom: 30px;
 }
 
 /* Background cambiado, (se elije la ultima modificacion) */
 /* #arriba2{background: url(/clase_0/img/monumental.jpg);} */
-.galeria {
+.clientes {
   width: 300px;
 }
 
 .cursiva {
   font-family: cursive;
-  color: rgb(207, 205, 168);
-  font-size: 40px;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: normal;
 }
 
 .display {
@@ -216,47 +218,48 @@ form {
   margin-left: 15px;
 }
 
-.contenedor_padre {
-  display: flex;
-  height: 550px;
-  background-color: rgb(205, 218, 108);
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+/* .contenedor_padre {
+    display: flex;
+    height: 550px;
+    background-color: rgb(205, 218, 108);
+    align-items: center;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
 
 .contenedor_hijo {
-  height: 100px;
-  width: 250px;
-  font-weight: 600;
-  background-color: rgb(224, 220, 220);
-  margin: 10px;
-  border: 1px solid;
-  border-radius: 5px;
+
+    height: 100px;
+    width: 250px;
+    font-weight: 600;
+    background-color: rgb(224, 220, 220);
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 5px;
 }
 
 .hijo-bueno {
-  background-color: brown;
-  flex-basis: 400px;
-  flex-grow: 0;
+    background-color: brown;
+    flex-basis: 400px;
+    flex-grow: 0;
 }
 
 .hijo-mas-bueno {
-  background-color: blue;
-  flex-basis: 600px;
-  flex-grow: 1;
-  order: 1;
+    background-color: blue;
+    flex-basis: 600px;
+    flex-grow: 1;
+    order: 1;
 }
 
 .el-mejor-hijo {
-  background-color: darkcyan;
-  flex-basis: 150px;
-  flex-grow: 5;
-  order: 2;
-}
-
-/* Página productos */
+    background-color: darkcyan;
+    flex-basis: 150px;
+    flex-grow: 5;
+    order: 2;
+} */
+/* Página PRODUCTOS */
 .inicio-presentacion-productos {
   display: inline-block;
   background-color: rgba(242, 203, 155, 0.637);
@@ -274,21 +277,18 @@ form {
   gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
 }
-
-.card-compra {
+.productos-compras .card-compra {
   height: 500px;
   width: 100%;
   background-color: rgba(239, 181, 211, 0.291);
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
-
-.card-compra:hover {
-  transform: scale(0.5);
+.productos-compras .card-compra:hover {
+  transform: scale(1.05);
 }
-
-.card-compra .card-compra-tittle {
+.productos-compras .card-compra-tittle {
   width: 100%;
   padding: 10px;
   font-size: 0.8rem;
@@ -296,16 +296,13 @@ form {
   flex-flow: column wrap;
   justify-content: space-between;
 }
-
-.card-compra img {
+.productos-compras img {
   width: 100%;
   height: 400px;
-  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 5px 5px 0 0;
 }
-
-.card-compra a.card-buttom {
+.productos-compras a.card-buttom {
   display: flex;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -318,13 +315,125 @@ form {
   border-radius: 5px;
   cursor: pointer;
 }
-
-.card-compra .card-buttom:hover {
+.productos-compras .card-buttom:hover {
   background-color: rgb(236, 173, 97);
 }
 
 .card-compra-tittle h4 {
   font-size: 1.2rem;
+}
+
+/* Pagina GALERIA */
+.galeria-presentacion {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 203, 155, 0.637);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* Imagenes de galeria */
+}
+.galeria-presentacion .galeria-video {
+  display: flex;
+  width: 75%;
+  height: 550px;
+  margin-top: 50px;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgba(239, 181, 211, 0.711);
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+  background-color: rgba(239, 181, 211, 0.291);
+}
+.galeria-presentacion .galeria-video video {
+  display: inline-block;
+  border: 1px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+.galeria-presentacion .galeria-video video:hover {
+  transform: scale(1.05);
+}
+.galeria-presentacion .productos-galeria {
+  width: 90%;
+  height: 100%;
+  padding: 2rem 4%;
+  background-color: rgba(239, 181, 211, 0.291);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+}
+.galeria-presentacion .productos-galeria .card-galeria {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(239, 181, 211, 0.291);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+  transition: transform 0.5s;
+}
+.galeria-presentacion .productos-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.dialogo-container {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.nube-tail {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  border: 10px solid transparent;
+  border-top-color: #e0e0e0;
+}
+
+/* Pagina CONTACTO */
+.Formulario-presentacion {
+  width: 90%;
+  height: 100%;
+  padding: 2rem 4%;
+  background-color: rgba(239, 181, 211, 0.291);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+}
+.Formulario-presentacion form {
+  background: url(/img/mas/vela1.jpg) center/cover no-repeat;
+  height: 100%;
+  width: 100%;
+  color: black; /* Color del texto */
+  font-size: 20px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bolder;
+}
+.Formulario-presentacion label, .Formulario-presentacion h3 {
+  background-color: rgba(236, 186, 212, 0.474);
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+}
+.Formulario-presentacion img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 /*  FOOTER */
@@ -494,6 +603,6 @@ footer {
     border: 1px solid;
     border-radius: 20px;
   }
-} 
+}
 
 /*# sourceMappingURL=style.css.map */

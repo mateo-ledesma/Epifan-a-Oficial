@@ -21,6 +21,10 @@ h2 {
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
+    background-color: rgba(236, 186, 212, 0.474);
+            color: black;
+            padding: 2px;
+            border-radius: 5px;
 }
 
 
@@ -100,6 +104,7 @@ header  {
 
 
                             /* Presentacion */
+                            /* Pagina INICIO */
 
 .inicio-presentacion {
     width: 100%;
@@ -143,6 +148,7 @@ header  {
 }
 
 
+                            
 
 
 p {
@@ -182,7 +188,8 @@ p {
 
 .box1 {
     width: 800px;
-    font-size: 25px
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 
@@ -191,14 +198,15 @@ p {
       /* #arriba2{background: url(/clase_0/img/monumental.jpg);} */
 
 
-.galeria {
+.clientes {
     width: 300px;
 }
 
 .cursiva {
     font-family: cursive;
-    color: rgb(207, 205, 168);
-    font-size: 40px
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: normal;
 }
 
 .display {
@@ -238,7 +246,7 @@ form {
 }
 
 
-.contenedor_padre {
+/* .contenedor_padre {
     display: flex;
     height: 550px;
     background-color: rgb(205, 218, 108);
@@ -278,9 +286,9 @@ form {
     flex-basis: 150px;
     flex-grow: 5;
     order: 2;
-}
+} */
 
-/* Página productos */
+                            /* Página PRODUCTOS */
 
 
 .inicio-presentacion-productos {
@@ -302,22 +310,18 @@ form {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
-    
-}
-
-.card-compra {
-    height: 500px;
-    width: 100%;
-    background-color: rgba(239, 181, 211, 0.291);
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .45);
-    transition: transform 1s;
-    
-
-    &:hover {
-        transform: scale(0.5);
-        
+    .card-compra {
+        height: 500px;
+        width: 100%;
+        background-color: rgba(239, 181, 211, 0.291);
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .45);
+        transition: transform 0.5s;
     }
+
+    .card-compra:hover {
+        transform: scale(1.05);
+        }
     
     .card-compra-tittle {
         width: 100%;
@@ -354,6 +358,144 @@ form {
 
 .card-compra-tittle h4 {
     font-size: 1.2rem;
+}
+
+/* Pagina GALERIA */
+
+
+
+
+
+
+
+.galeria-presentacion{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 203, 155, 0.637);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .galeria-video {
+        display: flex;
+        width: 75%;
+        height: 550px;
+        margin-top: 50px;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid rgba(239, 181, 211, 0.711);
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px rgba(0,0,0, .45);
+        background-color:rgba(239, 181, 211, 0.291);
+        
+        video {
+            display: inline-block;
+            border: 1px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, .60);
+            transition: 0.5s;
+        }
+        video:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Imagenes de galeria */
+
+    .productos-galeria{
+        width: 90%;
+        height: 100%;
+        padding: 2rem 4%;
+        background-color:rgba(239, 181, 211, 0.291);
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 40px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px rgba(0,0,0, .45);
+        
+        
+        .card-galeria {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(239, 181, 211, 0.291);
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, .45);
+            transition: transform 0.5s;
+        }
+        img{
+            width: 100%;
+            height: 100%;  
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+    }
+    }
+}
+
+.dialogo-container {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.nube-tail {
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    border: 10px solid transparent;
+    border-top-color: #e0e0e0;
+}
+
+
+
+
+       /* Pagina CONTACTO */
+
+
+.Formulario-presentacion {
+        width: 90%;
+        height: 100%;
+        padding: 2rem 4%;
+        background-color:rgba(239, 181, 211, 0.291);
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px rgba(0,0,0, .45);
+
+        form {
+            background: url(/img/mas/vela1.jpg) center/cover no-repeat;
+            height: 100%;
+            width: 100%;
+            color: black; /* Color del texto */
+            font-size: 20px;
+            text-align: center;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.5);
+            font-weight: bolder;
+        }
+
+        label, h3{
+            background-color: rgba(236, 186, 212, 0.474);
+            color: black;
+            padding: 2px;
+            border-radius: 5px;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+            
+            
+            
+
 }
 
                         /*  FOOTER */
@@ -460,6 +602,8 @@ footer {
         .mi-boton:hover {
             background-color: #2980b9;
         }
+
+
 
 /* Media queries */
 

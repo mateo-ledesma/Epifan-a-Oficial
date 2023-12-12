@@ -36,6 +36,7 @@ header {
   position: sticky;
   top: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
 }
 
 .nav {
@@ -46,7 +47,6 @@ header {
   padding: 2%;
   align-items: center;
   justify-content: space-around;
-  z-index: 1000;
 }
 .nav .icono_titulo {
   display: flex;
@@ -218,47 +218,6 @@ form {
   margin-left: 15px;
 }
 
-/* .contenedor_padre {
-    display: flex;
-    height: 550px;
-    background-color: rgb(205, 218, 108);
-    align-items: center;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-}
-
-.contenedor_hijo {
-
-    height: 100px;
-    width: 250px;
-    font-weight: 600;
-    background-color: rgb(224, 220, 220);
-    margin: 10px;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.hijo-bueno {
-    background-color: brown;
-    flex-basis: 400px;
-    flex-grow: 0;
-}
-
-.hijo-mas-bueno {
-    background-color: blue;
-    flex-basis: 600px;
-    flex-grow: 1;
-    order: 1;
-}
-
-.el-mejor-hijo {
-    background-color: darkcyan;
-    flex-basis: 150px;
-    flex-grow: 5;
-    order: 2;
-} */
 /* Página PRODUCTOS */
 .inicio-presentacion-productos {
   display: inline-block;
@@ -383,23 +342,6 @@ form {
   border-radius: 5px 5px 0 0;
 }
 
-.dialogo-container {
-  position: relative;
-  width: 300px;
-  padding: 20px;
-  background-color: #e0e0e0;
-  border-radius: 10px;
-  margin: 20px;
-}
-
-.nube-tail {
-  position: absolute;
-  top: 100%;
-  left: 20%;
-  border: 10px solid transparent;
-  border-top-color: #e0e0e0;
-}
-
 /* Pagina CONTACTO */
 .Formulario-presentacion {
   width: 90%;
@@ -434,6 +376,39 @@ form {
 .Formulario-presentacion img {
   width: 100%;
   border-radius: 20px;
+}
+
+/* Pagina Clientes  */
+.reseñas-clientes {
+  width: 90%;
+  height: 100%;
+  padding: 2rem 4%;
+  background-color: rgba(239, 181, 211, 0.291);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+}
+.reseñas-clientes .reseña {
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  background-color: #fbf8f8;
+  border-radius: 10px;
+  margin: 20px;
+  transition: transform 0.5s;
+}
+.reseñas-clientes .reseña:hover {
+  transform: scale(1.05);
+}
+.reseñas-clientes .nube {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  border: 10px solid transparent;
+  border-top-color: #ffffff;
 }
 
 /*  FOOTER */

@@ -24,10 +24,6 @@ h2 {
   margin-top: 50px;
   margin-bottom: 50px;
   text-align: center;
-  background-color: rgba(236, 186, 212, 0.474);
-  color: black;
-  padding: 2px;
-  border-radius: 5px;
 }
 
 /* Navegacion */
@@ -68,13 +64,12 @@ header {
   color: rgb(86, 81, 81);
 }
 .nav .nav_lista {
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
-  z-index: 10;
 }
 .nav .lista {
   display: flex;
@@ -140,8 +135,6 @@ p {
   font-size: 20px;
 }
 
-/* #arriba3 {color: green}*/
-/* Modif. por Class  (tamaño de texto)*/
 .text {
   font-size: 18px;
 }
@@ -164,13 +157,11 @@ p {
 }
 
 .box1 {
-  width: 800px;
+  width: 80% px;
   font-size: 25px;
   margin-bottom: 30px;
 }
 
-/* Background cambiado, (se elije la ultima modificacion) */
-/* #arriba2{background: url(/clase_0/img/monumental.jpg);} */
 .clientes {
   width: 300px;
 }
@@ -307,6 +298,7 @@ form {
 }
 .galeria-presentacion .galeria-video video {
   display: inline-block;
+  width: 50%;
   border: 1px;
   border-radius: 10px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
@@ -503,21 +495,23 @@ footer {
 }
 
 /* Media queries */
-@media (max-width: 768px) {
-  .icono_titulo {
+@media (min-width: 300px) and (max-width: 1058) {
+  .nav {
+    /* Check menu */
+  }
+  .nav .icono_titulo {
     width: 70%;
   }
-  /* Check menu */
   .nav label {
     display: block;
   }
-  .nav1titulo {
+  .nav .nav1titulo {
     font-size: 25px;
   }
-  .nav_lista {
+  .nav .nav_lista {
     display: none;
   }
-  #check-menu:checked ~ .nav_lista {
+  .nav #check-menu:checked ~ .nav_lista {
     position: absolute;
     left: 0;
     top: 60px;
@@ -529,9 +523,41 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .productos-compras {
-    grid-template-columns: repeat(1, 1fr);
+}
+@media (max-width: 1058px) {
+  /* Navegador */
+  .nav {
+    /* Check menu */
   }
+  .nav .icono_titulo {
+    width: 70%;
+  }
+  .nav label {
+    display: block;
+  }
+  .nav .nav1titulo {
+    font-size: 25px;
+  }
+  .nav .nav_lista {
+    display: none;
+  }
+  .nav #check-menu:checked ~ .nav_lista {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: 250px;
+    background-color: rgba(245, 213, 173, 0.923);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Productos */
+  .productos-compras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* footer */
   footer {
     height: 300px;
   }
@@ -546,7 +572,7 @@ footer {
   .footer-column3 {
     display: none;
   }
-  /* Presentacion */
+  /* Inicio */
   .inicio-presentacion {
     width: 100%;
     height: 100%;
@@ -556,27 +582,60 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .presentacion {
+  .inicio-presentacion .presentacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  .presentacion-img {
+  .inicio-presentacion .presentacion .presentacion-img {
     display: flex;
     margin: 0;
   }
-  .presentacion .presentacion-img img {
+  .inicio-presentacion .presentacion img {
     display: flex;
     width: 250px;
     margin-bottom: 30px;
   }
-  .presentacion-text {
+  .inicio-presentacion .presentacion .presentacion-text {
     display: flex;
     background-color: white;
     width: 250px;
     border: 1px solid;
     border-radius: 20px;
+  }
+  /* Contacto */
+  .Formulario-presentacion {
+    width: 70%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 850px) {
+  /* Clientes  */
+  main .reseñas-clientes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Galeria */
+  .galeria-presentacion .galeria-video video {
+    width: 80%;
+  }
+  .galeria-presentacion .productos-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1340px) {
+  .reseñas-clientes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  /* Galeria */
+  .galeria-presentacion .productos-galeria {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /* Productos */
+  .productos-compras {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 

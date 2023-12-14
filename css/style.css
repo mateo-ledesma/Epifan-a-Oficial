@@ -480,13 +480,13 @@ footer {
 
 /* Estilo del botón */
 .mi-boton {
-  background-color: #3498db; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 10px 20px;
+  font-size: 16px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
 }
 
 /* Cambia el color de fondo al pasar el ratón sobre el botón */

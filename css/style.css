@@ -496,9 +496,6 @@ footer {
 
 /* Media queries */
 @media (min-width: 300px) and (max-width: 1058) {
-  .nav {
-    /* Check menu */
-  }
   .nav .icono_titulo {
     width: 70%;
   }
@@ -526,9 +523,6 @@ footer {
 }
 @media (max-width: 1058px) {
   /* Navegador */
-  .nav {
-    /* Check menu */
-  }
   .nav .icono_titulo {
     width: 70%;
   }
